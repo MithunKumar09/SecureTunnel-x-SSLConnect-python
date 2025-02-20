@@ -24,7 +24,11 @@
 - **3️⃣ Start Stunnel**
 #### Modify stunnel.conf as per your system.
 - Run:
-- *stunnel stunnel.conf*
+- *stunnel stunnel.conf* [stunnel C:\Users\..\stunnel_project\stunnel.conf]
+- **Check Connection:** Get-Process | Where-Object { $_.ProcessName -like "stunnel*" }
+- **Confirm B Server Connection:** Get-Process | Where-Object { $_.ProcessName -like "python*" }
+- **Stop Stunnel:** Stop-Process -Name "stunnel" -Force
+- **Stop Server B:** Stop-Process -Id 44328 -Force
 
 - **4️⃣ Run Servers**
 #### Start Server B (Order Receiver)
