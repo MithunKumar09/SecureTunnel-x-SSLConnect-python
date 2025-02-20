@@ -1,0 +1,36 @@
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.env
+
+# Logs and Debug Files
+stunnel.log
+*.log
+
+# SSL Certificates and Keys (Sensitive files)
+*.pem
+*.key
+*.crt
+*.csr
+
+# Virtual Environments
+venv/
+env/
+.virtualenv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# OS-Specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
