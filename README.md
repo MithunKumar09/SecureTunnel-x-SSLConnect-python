@@ -19,7 +19,15 @@
 - *pip install pyopenssl win10toast*
 
 - **2️⃣ Generate SSL Certificates (If Not Generated)**
-- *openssl req -new -x509 -days 365 -nodes -out stunnel.pem -keyout stunnel.key*
+- *openssl req -x509 -newkey rsa:4096 -keyout stunnel.key -out stunnel.pem -days 365 -nodes -config san.cnf*
+  **Feature**
+- -x509: Creates a self-signed certificate.
+- newkey rsa:4096: Generates a 4096-bit RSA key.
+- keyout stunnel.key: Saves the private key.
+- out stunnel.pem: Saves the certificate.
+- days 365: Certificate validity for 1 year.
+- nodes: No passphrase for the private key.
+- config san.cnf: Uses the SAN configuration.
 
 - **3️⃣ Start Stunnel**
 #### Modify stunnel.conf as per your system.
